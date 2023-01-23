@@ -46,7 +46,7 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla. Varius quam quisque id diam.      </SectionText>
+      Welcome to my portfolio! I am a web developer with a passion for creating visually appealing and user-friendly websites. I have experience with a variety of programming languages, including HTML, CSS, JavaScript. I also know popular web development frameworks such as React and Tailwind CSS. My goal is to design websites that not only look great, but also provide a seamless experience for the user. I am always looking for new challenges and opportunities to expand my knowledge and skills. Thank you for visiting my portfolio, and I hope you find it informative and enjoyable.        </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (

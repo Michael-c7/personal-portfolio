@@ -13,8 +13,7 @@ const Hero = (props) => (
           My Personal Portfolio
         </SectionTitle>
         <SectionText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla. Varius quam quisque id diam. Vitae suscipit tellus mauris a diam. Tempor orci eu lobortis elementum.
-        </SectionText>
+        I am a web developer with a passion for creating visually appealing and user-friendly websites. My goal is to design websites that not only look great, but also provide a seamless experience for the user. I am always looking for new challenges and opportunities to expand my knowledge and skills.        </SectionText>
         <Button onClick={props.handleClick}>Learn More</Button>
       </LeftSection>
     </Section>
