@@ -4,6 +4,18 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
+
+
+const hover = (newImage, index) => {
+  const imgToChange = document.querySelectorAll(`#project__img`)[index]
+  imgToChange.setAttribute('src', `${newImage}`);
+}
+
+const unHover = (originalImage, index) => {
+  const imgToChange = document.querySelectorAll(`#project__img`)[index]
+  imgToChange.setAttribute('src', `${originalImage}`);
+}
+
 const Projects = () => (
   <Section nopadding id="projects">
     <SectionDivider />
@@ -11,8 +23,8 @@ const Projects = () => (
     <GridContainer>
       {projects.map((p, i) => {
         return (
-          <BlogCard key={i}>
-          <Img src={p.image} />
+          <BlogCard key={i} onMouseOver={() => hover(p.gif, i)} onMouseOut={() => unHover(p.image, i)}>
+          <Img id="project__img" src={p.image} />
             <TitleContent>
               <HeaderThree title>{p.title}</HeaderThree>
               <Hr />
@@ -27,8 +39,8 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={p.visit}>Code</ExternalLinks>
-              <ExternalLinks href={p.source}>Source</ExternalLinks>
+              <ExternalLinks href={p.visit}>Live Site</ExternalLinks>
+              <ExternalLinks href={p.source}>Source Code</ExternalLinks>
             </UtilityList>
           </BlogCard>
         );
