@@ -43,11 +43,12 @@ const Timeline = () => {
   }, []);
 
   return (
-    <Section id="about">
+    <Section id="about" >
       <SectionTitle>About Me</SectionTitle>
-      <SectionText>
-      Welcome to my portfolio! I am a web developer with a passion for creating visually appealing and user-friendly websites. I have experience with a variety of programming languages, including HTML, CSS, JavaScript. I also know popular web development frameworks such as React and Tailwind CSS. My goal is to design websites that not only look great, but also provide a seamless experience for the user. I am always looking for new challenges and opportunities to expand my knowledge and skills. Thank you for visiting my portfolio, and I hope you find it informative and enjoyable.        </SectionText>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+      <SectionText ref={carouselRef} onScroll={handleScroll}>
+      Welcome to my portfolio! I am a web developer with a passion for creating visually appealing and user-friendly websites. I have experience with a variety of programming languages, including HTML, CSS, JavaScript. I also know popular web development frameworks such as React and Tailwind CSS. My goal is to design websites that not only look great, but also provide a seamless experience for the user. I am always looking for new challenges and opportunities to expand my knowledge and skills. Thank you for visiting my portfolio, and I hope you find it informative and enjoyable.
+      </SectionText>
+      {/* <CarouselContainer >
         <>
           {TimeLineData.map((item, index) => (
             <CarouselMobileScrollNode
@@ -96,8 +97,8 @@ const Timeline = () => {
             </CarouselMobileScrollNode>
           ))}
         </>
-      </CarouselContainer>
-      <CarouselButtons>
+      </CarouselContainer> */}
+      {/* <CarouselButtons>
         {TimeLineData.map((item, index) => {
           return (
             <CarouselButton
@@ -110,7 +111,7 @@ const Timeline = () => {
             </CarouselButton>
           );
         })}
-      </CarouselButtons>
+      </CarouselButtons> */}
       <SectionDivider />
     </Section>
   );
